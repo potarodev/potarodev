@@ -1,0 +1,79 @@
+---
+import InfoCard from "../components/InfoCard.astro";
+import SocialLink from "../components/SocialLink.tsx";
+import ToasterWrapper from "../components/ToasterWrapper";
+
+import "@fontsource-variable/lexend";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>potaro</title>
+  </head>
+  <body
+    class="dark:bg-zinc-950 bg-zinc-50 dark:text-white flex flex-col items-center h-full gap-12 text-xl"
+  >
+    <h1
+      class="text-6xl font-bold pt-20 text-center leading-tight md:leading-none"
+    >
+      hi, i'm
+      <span
+        class="bg-gradient-to-br from-pink-100 via-0% pb-2 px-4 dark:px-0 dark:via-30% rounded-md via-pink-400 to-rose-600 dark:bg-clip-text text-white dark:text-transparent"
+      >
+        potaro
+      </span>
+    </h1>
+    <p class="text-2xl text-center w-2/3">
+      web & fullstack developer making silly things :3
+    </p>
+
+    <div class="w-2/3 md:w-1/3 space-y-12">
+      <InfoCard title="about me" class="space-y-2">
+        <p>i'm a 17 year old developer & student in the united states</p>
+        <p>
+          i mostly work with frontend and minecraft, but i'm learning backend
+          and roblox!
+        </p>
+      </InfoCard>
+      <InfoCard title="my projects">
+        <p class="italic">none yet! coming soon</p>
+      </InfoCard>
+      <InfoCard title="contact / links">
+        <ul class="list-inside list-disc">
+          <li>
+            twitter: <SocialLink
+              href="https://twitter.com/potarodev"
+              label="@potarodev"
+            />
+          </li>
+          <li>
+            github: <SocialLink
+              href="https://github.com/potarodev"
+              label="@potarodev"
+            />
+          </li>
+          <li>
+            discord: <SocialLink
+              copyMode
+              href="potaromc"
+              label="@potaromc"
+              client:load
+            />
+          </li>
+        </ul>
+      </InfoCard>
+
+      <ToasterWrapper client:only />
+    </div>
+
+    <style>
+      html {
+        @apply h-full font-sans;
+      }
+    </style>
+  </body>
+</html>
