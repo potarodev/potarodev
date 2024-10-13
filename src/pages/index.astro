@@ -1,4 +1,5 @@
 ---
+import EmbedMeta from "../components/EmbedMeta.astro";
 import InfoCard from "../components/InfoCard.astro";
 import SocialLink from "../components/SocialLink.tsx";
 import ToasterWrapper from "../components/ToasterWrapper";
@@ -13,6 +14,7 @@ import "@fontsource-variable/lexend";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>potaro</title>
+    <EmbedMeta />
   </head>
   <body
     class="dark:bg-zinc-950 bg-zinc-50 dark:text-white flex flex-col items-center h-full gap-12 text-xl"
